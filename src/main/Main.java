@@ -1,8 +1,18 @@
 package main;
 
+import main.models.foods.Product;
+import main.models.foods.*;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        Product[] products = {
+                null,
+                new Sugar(),
+                new Milk(),
+                new Product()
+        };
 
     }
 

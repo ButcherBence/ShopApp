@@ -1,5 +1,6 @@
 package main.models;
 
+import main.models.foods.*;
 import main.models.foods.Product;
 
 public class Customer {
@@ -41,6 +42,24 @@ public class Customer {
 
     public void payTheBill(int bill) {
         money -= bill;
+    }
+
+
+    public Milk findMilk(Product[] products, double maxFatPercent) {
+        for (Product product : products){
+            if (product instanceof Milk productMilk && productMilk.getFat() < maxFatPercent){
+                // Milk milk = (Milk) product; HELYETTESÍTHETŐ AZ IFBEN LÁTOTTAL
+                    return productMilk;
+                }
+        }
+        return null;
+    }
+    public void buyMilk(Product[] products, double maxFatPercent){
+        Milk milk = findMilk(products,maxFatPercent);
+
+        if (milk!=null){
+        boolean buy = couldPutIntoCart(milk);
+        }
     }
 
     public String getName() {
