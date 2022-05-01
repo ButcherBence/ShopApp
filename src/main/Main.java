@@ -17,7 +17,7 @@ public class Main {
                 new Product()
         };
 
-        Shoe shoe = new Shoe(Gender.MALE,12000, 32);
+        Shoe shoe = new Shoe(Gender.MALE,12000, 48);
         Shirt shirt = new Shirt(Gender.FEMALE,25000,ClothSize.XS);
         System.out.println(shoe);
         System.out.println(shirt);
