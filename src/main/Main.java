@@ -1,5 +1,8 @@
 package main;
 
+import main.models.Wearable.ClothSize;
+import main.models.Wearable.Gender;
+import main.models.Wearable.*;
 import main.models.foods.Product;
 import main.models.foods.*;
 
@@ -14,7 +17,13 @@ public class Main {
                 new Product()
         };
 
+        Shoe shoe = new Shoe(Gender.MALE,12000, 32);
+        Shirt shirt = new Shirt(Gender.FEMALE,25000,ClothSize.XS);
+        System.out.println(shoe);
+        System.out.println(shirt);
     }
+
+
 
 
     // DRY = DO NOT REPEAT YOURSELF!!!
